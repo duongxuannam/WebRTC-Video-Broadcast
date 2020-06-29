@@ -16,6 +16,7 @@ app.get('/hello', (req, res) => res.send('Hello World!'));
 io.sockets.on('error', (e) => console.log(e));
 io.sockets.on('connection', (socket) => {
   socket.on('broadcaster', () => {
+    console.log('broadcaster init ');
     broadcaster = socket.id;
     socket.broadcast.emit('broadcaster');
   });
