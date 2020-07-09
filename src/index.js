@@ -8,7 +8,7 @@ const http = require('http');
 const server = http.createServer(app);
 
 const io = require('socket.io')(server);
-app.use(express.static(__dirname + '../public'));
+app.use(express.static(__dirname + '/../public'));
 app.get('/', (req, res) => res.send('Hello Worldddd!'));
 
 app.get('/hello', (req, res) => res.send('Hello World!'));
