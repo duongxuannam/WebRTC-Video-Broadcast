@@ -1,9 +1,10 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
+import SocketService from 'services/socketService';
+import routes from 'routes';
+import logger from 'utils/logger';
 import configs from './config';
-import SocketService from './services/socketService';
-import logger from './utils/logger';
 
 const app = express();
 
@@ -21,9 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + '/../public'));
 
-app.get('/hello2', (req, res) => res.send('Hello Worldddd!'));
-
-app.get('/hello', (req, res) => res.send('Hello World!'));
+app.use('/', routes);
 
 SocketService.start(server);
 
