@@ -1,39 +1,38 @@
-const express = require('express');
+import express from 'express';
+import bodyParser from 'body-parser';
+import morgan from 'morgan';
+import configs from './config';
+import SocketService from './services/socketService';
+import logger from './utils/logger';
+
 const app = express();
 
-let broadcaster;
-const port = process.env.PORT || 1995;
+const port = configs.PORT || 1995;
 
 const http = require('http');
 const server = http.createServer(app);
 
-const io = require('socket.io')(server);
+if (process.env.NODE_ENV !== 'production') {
+  app.use(morgan('dev'));
+}
+app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(express.static(__dirname + '/../public'));
-app.get('/', (req, res) => res.send('Hello Worldddd!'));
+
+app.get('/hello2', (req, res) => res.send('Hello Worldddd!'));
 
 app.get('/hello', (req, res) => res.send('Hello World!'));
 
-io.sockets.on('error', (e) => console.log(e));
-io.sockets.on('connection', (socket) => {
-  socket.on('broadcaster', () => {
-    console.log('broadcaster init ');
-    broadcaster = socket.id;
-    socket.broadcast.emit('broadcaster');
-  });
-  socket.on('watcher', () => {
-    socket.to(broadcaster).emit('watcher', socket.id);
-  });
-  socket.on('offer', (id, message) => {
-    socket.to(id).emit('offer', socket.id, message);
-  });
-  socket.on('answer', (id, message) => {
-    socket.to(id).emit('answer', socket.id, message);
-  });
-  socket.on('candidate', (id, message) => {
-    socket.to(id).emit('candidate', socket.id, message);
-  });
-  socket.on('disconnect', () => {
-    socket.to(broadcaster).emit('disconnectPeer', socket.id);
-  });
-});
-server.listen(port, () => console.log(`Server is running on port ${port}`));
+SocketService.start(server);
+
+server.listen(port, () => logger.info(`> Ready on port ${port}`));
+
+// keep server running
+process.on('uncaughtException', (err) =>
+  logger.error('uncaughtException: ' + err)
+);
+process.on('unhandledRejection', (err) =>
+  logger.error('unhandledRejection: ' + err)
+);
