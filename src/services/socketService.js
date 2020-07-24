@@ -84,16 +84,16 @@ class _SocketService {
         this.io.to(socket.id).emit('getRooms', rooms[roomId]);
       });
 
-      socket.on('candidateRoomVideo', (roomId, candidate) => {
-        socket.to(roomId).emit('candidateRoomVideo', socket.id, candidate);
+      socket.on('candidateRoomVideo', (roomId, candidate, id) => {
+        socket.to(roomId).emit('candidateRoomVideo', id, candidate);
       });
 
-      socket.on('offerRoomVideo', (roomId, description) => {
-        socket.to(roomId).emit('offerRoomVideo', socket.id, description);
+      socket.on('offerRoomVideo', (roomId, description, id) => {
+        socket.to(roomId).emit('offerRoomVideo', id, description);
       });
 
-      socket.on('answerRoomVideo', (roomId, description) => {
-        socket.to(roomId).emit('answerRoomVideo', socket.id, description);
+      socket.on('answerRoomVideo', (roomId, description, id) => {
+        socket.to(roomId).emit('answerRoomVideo', id, description);
       });
     });
   }
