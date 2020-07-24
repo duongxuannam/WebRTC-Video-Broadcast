@@ -85,15 +85,15 @@ class _SocketService {
       });
 
       socket.on('candidateRoomVideo', (roomId, candidate, id) => {
-        socket.to(roomId).emit('candidateRoomVideo', id, candidate);
+        socket.to(id).emit('candidateRoomVideo', socket.id, candidate);
       });
 
       socket.on('offerRoomVideo', (roomId, description, id) => {
-        socket.to(roomId).emit('offerRoomVideo', id, description);
+        socket.to(id).emit('offerRoomVideo', socket.id, description);
       });
 
       socket.on('answerRoomVideo', (roomId, description, id) => {
-        socket.to(roomId).emit('answerRoomVideo', id, description);
+        socket.to(id).emit('answerRoomVideo', socket.id, description);
       });
     });
   }
