@@ -33,7 +33,7 @@ class _ScheduleService {
 
     this.wakeUp = new CronJob(
       //   '* * * * * *',
-      '0 */2 * * * *',
+      '0 */28 * * * *',
       wakeUp,
       null,
       false,
