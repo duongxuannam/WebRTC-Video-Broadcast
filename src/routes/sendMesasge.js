@@ -12,7 +12,7 @@ const routes = Router();
 
 routes.get('/withAppState', async (_, res) => {
   try {
-    await sendMessageWithAppState('Mieeeee');
+    await sendMessageWithAppState('Mai mot anh gui bang fb nay nha mieeee');
     res.send('WithAppState Okey roi nha');
   } catch (e) {
     console.log('e', e);

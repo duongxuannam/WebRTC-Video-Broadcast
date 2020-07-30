@@ -9,7 +9,10 @@ routes.use(verifyToken);
 
 //page index
 
-routes.get('/hello2', (req, res) => res.send('Hello Worldddd!'));
+routes.get('/wakeUp', (req, res) => {
+  console.log('wake upppppp');
+  res.send('Hello Worldddd!');
+});
 
 routes.get('/hello', (req, res) => res.send('Hello World!'));
 

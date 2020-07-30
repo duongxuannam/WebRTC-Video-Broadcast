@@ -15,7 +15,7 @@ const obj = {
 };
 // idCuaMie = '100008191653173'
 
-export const sendMessageWithAppState = (message = 'form Nam with love') => {
+export const sendMessageWithAppState = (message = 'from Nam with love') => {
   return new Promise((resolve, reject) => {
     login(
       { appState: JSON.parse(fs.readFileSync('appstate.json', 'utf8')) },
@@ -46,7 +46,7 @@ export const sendMessageWithAppState = (message = 'form Nam with love') => {
         fs.writeFileSync('appstate.json', JSON.stringify(api.getAppState()));
 
         // Logged in!
-        const yourID = '100003453082379';
+        const yourID = '100008191653173';
         // const yourID = '100004534216796';
 
         api.sendMessage(message, yourID);

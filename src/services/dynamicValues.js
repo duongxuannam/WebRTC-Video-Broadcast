@@ -5,19 +5,37 @@ const admin = FirebaseAdmin.admin();
 class _DynamicValues {
   constructor() {
     this.FB_CODE = null;
+    this.numberMessage = null;
   }
 
   init() {
     const db = admin.database();
-    const ref = db.ref('FB_CODE');
+    const refFBCode = db.ref('FB_CODE');
     const bindSetFBCode = (value) => this.setFBCode(value);
-    ref.on('value', function(snapshot) {
+    refFBCode.on('value', function(snapshot) {
       bindSetFBCode(snapshot.val());
+    });
+
+    const refNumberMessage = db.ref('numberMessage');
+    const bindSetNumberMessage = (value) => this.setNumberMessage(value);
+    refNumberMessage.once('value', function(snapshot) {
+      bindSetNumberMessage(snapshot.val());
     });
   }
 
   setFBCode(value) {
     this.FB_CODE = value;
+  }
+  setNumberMessage(value) {
+    this.numberMessage = value;
+  }
+
+  setNumberMessageFirebase(value) {
+    this.numberMessage = value;
+
+    const db = admin.database();
+    const refNumberMessage = db.ref('numberMessage');
+    refNumberMessage.set(value);
   }
 }
 

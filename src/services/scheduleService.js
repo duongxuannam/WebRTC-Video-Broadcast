@@ -1,8 +1,22 @@
 import { CronJob } from 'cron';
+import request from 'request';
+
 import { sendMessageWithAppState } from './sendMessage';
 
 const sendMessage = () => {
   sendMessageWithAppState('a j no mo to');
+};
+
+const wakeUp = () => {
+  request('https://apimongo.herokuapp.com/wakeUp', function(
+    error,
+    response,
+    body
+  ) {
+    if (!error && response.statusCode == 200) {
+      console.log(body); // Print the google web page.
+    }
+  });
 };
 
 class _ScheduleService {
@@ -16,10 +30,21 @@ class _ScheduleService {
       //   'America/Los_Angeles'
       'Asia/Ho_Chi_Minh'
     );
+
+    this.wakeUp = new CronJob(
+      //   '* * * * * *',
+      '30 * * * * *',
+      wakeUp,
+      null,
+      false,
+      //   'America/Los_Angeles'
+      'Asia/Ho_Chi_Minh'
+    );
   }
 
   startSendMessage() {
     this.sendMessage.start();
+    this.wakeUp.start();
   }
 }
 
