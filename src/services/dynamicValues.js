@@ -18,7 +18,7 @@ class _DynamicValues {
 
     const refNumberMessage = db.ref('numberMessage');
     const bindSetNumberMessage = (value) => this.setNumberMessage(value);
-    refNumberMessage.once('value', function(snapshot) {
+    refNumberMessage.on('value', function(snapshot) {
       bindSetNumberMessage(snapshot.val());
     });
   }
@@ -26,11 +26,11 @@ class _DynamicValues {
   setFBCode(value) {
     this.FB_CODE = value;
   }
-  setNumberMessage(value) {
-    this.numberMessage = value;
+  setNumberMessage(value = 0) {
+    this.numberMessage = value || 0;
   }
 
-  setNumberMessageFirebase(value) {
+  setNumberMessageFirebase(value = 0) {
     this.numberMessage = value;
 
     const db = admin.database();

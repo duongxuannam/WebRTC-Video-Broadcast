@@ -4,7 +4,6 @@ import {
   sendMessageWithFBCode,
 } from '../services/sendMessage';
 import FirebaseAdmin from '../services/firebaseAdmin';
-import DynamicValues from '../services/dynamicValues';
 
 const admin = FirebaseAdmin.admin();
 

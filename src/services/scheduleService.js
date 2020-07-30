@@ -1,10 +1,19 @@
 import { CronJob } from 'cron';
 import request from 'request';
-
+import DynamicValues from './dynamicValues';
+import msgData from '../utils/sourceTanGai';
 import { sendMessageWithAppState } from './sendMessage';
 
-const sendMessage = () => {
-  sendMessageWithAppState('a j no mo to');
+const sendMessage = async () => {
+  try {
+    const number = DynamicValues.numberMessage;
+    const msg = msgData[number];
+    console.log('msg ', msg, number);
+    await sendMessageWithAppState(msg);
+    DynamicValues.setNumberMessageFirebase(number + 1);
+  } catch (e) {
+    console.log(e);
+  }
 };
 
 const wakeUp = () => {
@@ -22,12 +31,11 @@ const wakeUp = () => {
 class _ScheduleService {
   constructor() {
     this.sendMessage = new CronJob(
-      //   '* * * * * *',
-      '00 26 17 * * *',
+      '00 29 05 * * *',
+      //   '*/30 * * * * *',
       sendMessage,
       null,
       false,
-      //   'America/Los_Angeles'
       'Asia/Ho_Chi_Minh'
     );
 
@@ -37,7 +45,6 @@ class _ScheduleService {
       wakeUp,
       null,
       false,
-      //   'America/Los_Angeles'
       'Asia/Ho_Chi_Minh'
     );
   }
