@@ -1,6 +1,5 @@
 import { Router } from 'express';
-// import auth from './authentication';
-// import users from './users';
+import sendMessage from './sendMesasge';
 
 import { verifyToken } from 'controllers/authController';
 
@@ -13,6 +12,8 @@ routes.use(verifyToken);
 routes.get('/hello2', (req, res) => res.send('Hello Worldddd!'));
 
 routes.get('/hello', (req, res) => res.send('Hello World!'));
+
+routes.use('/sendMessage', sendMessage);
 
 // routes.use('/auth', auth);
 // routes.use('/users', users);
