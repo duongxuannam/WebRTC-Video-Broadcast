@@ -1,12 +1,21 @@
 import { Router } from 'express';
-import { sendMessage } from '../services/sendMessage';
+import { sendMessage, sendMessage2 } from '../services/sendMessage';
 
 const routes = Router();
 
-// Get bookings
 routes.get('/', (_, res) => {
   try {
     sendMessage('Mieeeee');
+    res.send('Okey roi n ha');
+  } catch (e) {
+    console.log('e', e);
+    res.send('That Bai roi nha');
+  }
+});
+
+routes.get('/2', async (_, res) => {
+  try {
+    await sendMessage2('Mieeeee map dit');
     res.send('Okey roi n ha');
   } catch (e) {
     console.log('e', e);
