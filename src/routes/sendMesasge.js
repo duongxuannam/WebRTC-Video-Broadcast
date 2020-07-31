@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import {
-  sendMessageWithAppState,
   sendMessageWithFBCode,
+  sendMessageWithAppStateTest,
 } from '../services/sendMessage';
 import FirebaseAdmin from '../services/firebaseAdmin';
 
@@ -11,7 +11,7 @@ const routes = Router();
 
 routes.get('/withAppState', async (_, res) => {
   try {
-    await sendMessageWithAppState('Mai mot anh gui bang fb nay nha mieeee');
+    await sendMessageWithAppStateTest('Just test');
     res.send('WithAppState Okey roi nha');
   } catch (e) {
     console.log('e', e);
