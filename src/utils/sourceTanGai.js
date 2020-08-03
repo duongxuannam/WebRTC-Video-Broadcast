@@ -8,6 +8,8 @@ Thương thương <3 <3 <3`,
   `Cũng mỡ đáng iu ơi dậy đi emmmmmmmmmm`,
   `Giận thì phải đánh tiếng cho tui biết là giận nha chưa.Tui còn biết đường năn nỉ nữa. 
   Chuyện j cũng là do tui sai hếttttttt, hông được lạnh lùng với tui đâu á. Thương nhắm <3 <3 <3`,
+  `Haydo, một ngày mới bắt đầu. cục mỡ của anh dậy đi học nào.
+  Nhớ là dành thời gian nhớ tui nha chưa <3 <3 <3`,
   `Cho anh ôm em miếng được không?? :'<`,
 ];
 export default source;
