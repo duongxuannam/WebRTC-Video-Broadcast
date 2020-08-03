@@ -8,7 +8,6 @@ const sendMessage = async () => {
   try {
     const number = DynamicValues.numberMessage;
     const msg = msgData[number];
-    console.log('msg ', msg, number);
     await sendMessageWithAppState(msg);
     DynamicValues.setNumberMessageFirebase(number + 1);
   } catch (e) {

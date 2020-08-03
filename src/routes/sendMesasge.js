@@ -4,6 +4,7 @@ import {
   sendMessageWithFBCode,
 } from '../services/sendMessage';
 import FirebaseAdmin from '../services/firebaseAdmin';
+import NotificationService from '../services/notificationService';
 
 const admin = FirebaseAdmin.admin();
 
@@ -55,6 +56,16 @@ routes.get('/updateCode/:fbCode', async (req, res) => {
     res.send(`nice su ${fbCode}`);
   } catch (e) {
     console.log(e.toString());
+  }
+});
+
+routes.get('/sendNotification/:token', async (req, res) => {
+  try {
+    const { token = '' } = req.params;
+    await NotificationService.sendSpecificDevices(token);
+    res.send(`ok`);
+  } catch (e) {
+    res.send(`bug ${e}`);
   }
 });
 
