@@ -13,6 +13,6 @@ Thương thương <3 <3 <3`,
   `Lại một ngày nữa trôi qua. Mặc dù h này chắc anh vẫn ngủ nhưng khá chắc kèo là anh đang mơ về em á. Cục dàng đi học vui vẻ nhoa <3 <3 <3`,
   `Aida nay lạnh quá trời quá đất luôn ước j đc ôm ai đó mập mập tí ha.
   Cục dàng yêu dấu đã dậy chưa?? Anh thì chắc dậy rồi á chứ hông có nằm ôm mền ngủ đâu ha mà có làm j thì cũng đang nhớ em lắm luôn <3 <3 <3`,
-  `Cho anh ôm em miếng được không?? :'<`,
+  `Mấy hôm nay mưa gió bảo bùng cho anh ôm em miếng được không?? :'<`,
 ];
 export default source;
