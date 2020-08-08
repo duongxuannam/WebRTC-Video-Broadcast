@@ -14,6 +14,9 @@ Thương thương <3 <3 <3`,
   `Aida nay lạnh quá trời quá đất luôn ước j đc ôm ai đó mập mập tí ha.
   Cục dàng yêu dấu đã dậy chưa?? Anh thì chắc dậy rồi á chứ hông có nằm ôm mền ngủ đâu ha mà có làm j thì cũng đang nhớ em lắm luôn <3 <3 <3`,
   `Mấy hôm nay mưa gió bảo bùng cho anh ôm em miếng được không?? :'<`,
-  `Aidui mấy nay em bận quá à. Nhưng mà hổng sao đợi tới mức này rồi hổng lẽ hông đợi nữa =]]. Cục mỡ dậy đi học nào <3 <3 <3`
+  `Aidui mấy nay em bận quá à. Nhưng mà hổng sao đợi tới mức này rồi hổng lẽ hông đợi nữa =]]. Cục mỡ dậy đi học nào <3 <3 <3`,
+  `Haloo lại là anh đây. Mặc dù vẫn còn hơn chục tin nhắn soạn sẵn nhưng đây chắc là nhiệm vụ cuối cùng của con bot này rồi, từ ngày mai anh sẽ tắt nó. 
+  Không biết có kịp làm em vui buổi sáng nào chưa :'<.
+  Cám ơn ơn em đã để lại cho anh những kỷ niệm đẹp. Chúc em mau ăn chóng lớn - cuộc sống luôn tràn tiếng cười. Bái bai <3 <3 <3`
 ];
 export default source;
