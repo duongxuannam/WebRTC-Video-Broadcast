@@ -48,8 +48,8 @@ export const sendMessageWithAppState = (message = 'From Nam with love') => {
         fs.writeFileSync('appstate.json', JSON.stringify(api.getAppState()));
 
         // Logged in!
-        const mieID = '100008191653173';
-        api.sendMessage(message, mieID);
+        // const mieID = '100008191653173';
+        // api.sendMessage(message, mieID);
 
         // console.log('api.getCurrentUserID()', api.getCurrentUserID());
         return resolve();
