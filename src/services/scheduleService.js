@@ -6,10 +6,10 @@ import { sendMessageWithAppState } from './sendMessage';
 
 const sendMessage = async () => {
   try {
-    const number = DynamicValues.numberMessage;
-    const msg = msgData[number];
-    await sendMessageWithAppState(msg);
-    DynamicValues.setNumberMessageFirebase(number + 1);
+    // const number = DynamicValues.numberMessage;
+    // const msg = msgData[number];
+    // await sendMessageWithAppState(msg);
+    // DynamicValues.setNumberMessageFirebase(number + 1);
   } catch (e) {
     console.log(e);
   }
