@@ -4,14 +4,14 @@ import morgan from 'morgan';
 import SocketService from 'services/socketService';
 import FirebaseAdmin from 'services/firebaseAdmin';
 import DynamicValues from 'services/dynamicValues';
-import ScheduleService from 'services/scheduleService';
+// import ScheduleService from 'services/scheduleService';
 import routes from 'routes';
 import logger from 'utils/logger';
 import configs from './config';
 
 FirebaseAdmin.init();
 DynamicValues.init();
-ScheduleService.startSendMessage();
+// ScheduleService.startSendMessage();
 
 const app = express();
 
