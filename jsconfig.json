@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "target": "es6",
+      "paths": {
+        "*": ["src/*"],
+        "controllers/*": ["src/controllers/*"],
+        "utils/*": ["src/utils/*"],
+        "routes/*": ["src/routes/*"],
+        "models/*": ["./src/models/*"],
+        "services/*"  : ["./src/services/*"],
+      },  
+      "module": "commonjs"
+    },
+    "exclude": ["node_modules"],
+}

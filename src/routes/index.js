@@ -10,7 +10,6 @@ routes.use(verifyToken);
 //page index
 
 routes.get('/wakeUp', (req, res) => {
-  console.log('wake upppppp');
   res.send('Hello Worldddd!');
 });
 
@@ -20,7 +19,7 @@ routes.use('/sendMessage', sendMessage);
 
 // routes.use('/auth', auth);
 // routes.use('/users', users);
-// // routes.use('/images', images);
+// routes.use('/images', images);
 
 routes.use((err, req, res, next) => {
   if (err.name !== 'HttpError' || !err.errorCode) return next(err);
