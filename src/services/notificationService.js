@@ -1,3 +1,4 @@
+import logger from 'utils/logger';
 import FirebaseAdmin from './firebaseAdmin';
 
 const admin = FirebaseAdmin.admin();
@@ -48,9 +49,9 @@ class _NotificationService {
       // Send a message to the device corresponding to the provided
       // registration token.
       const response = await admin.messaging().send(message);
-      console.log('Successfully sent message:', response);
+      logger.error(`Successfully sent message:${response}` );
     } catch (error) {
-      console.log('Error sending message:', error);
+      logger.error(`Error sending message:${error}`, );
     }
   }
 
@@ -66,9 +67,9 @@ class _NotificationService {
       // Send a message to the device corresponding to the provided
       // registration token.
       const response = await admin.messaging().sendMulticast(message);
-      console.log('Successfully sent message:', response);
+      logger.error(`Successfully sent message:${response}`);
     } catch (error) {
-      console.log('Error sending message:', error);
+      logger.error(`Error sending message:${error}` );
     }
   }
 
@@ -84,9 +85,9 @@ class _NotificationService {
       // Send a message to the device corresponding to the provided
       // registration token.
       const response = await admin.messaging().send(message);
-      console.log('Successfully sent message:', response);
+      logger.error(`Successfully sent message:${response}`, );
     } catch (error) {
-      console.log('Error sending message:', error);
+      logger.error(`Error sending message:${error}`);
     }
   }
 
@@ -105,9 +106,9 @@ class _NotificationService {
       // Send a message to the device corresponding to the provided
       // registration token.
       const response = await admin.messaging().send(message);
-      console.log('Successfully sent message:', response);
+      logger.error(`Successfully sent message:${response}`);
     } catch (error) {
-      console.log('Error sending message:', error);
+      logger.error(`Error sending message:${error}`);
     }
   }
 }

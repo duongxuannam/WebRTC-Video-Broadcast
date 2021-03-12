@@ -5,7 +5,7 @@ dotenv.config();
 //get config from environment
 export default {
   PORT: process.env.PORT,
-  MONGO_URL: process.env.WEVA_MONGO_URL,
+  MONGO_URL: process.env.WEVA_MONGO_URL || 'chetqueo',
   JWT_SECRET_TOKEN: process.env.JWT_SECRET_TOKEN,
   FB_APP_ID: process.env.FB_APP_ID,
   AK_APP_SECRET: process.env.AK_APP_SECRET,
@@ -21,5 +21,5 @@ export default {
   FIREBASE: process.env.FIREBASE,
   AWS_REGION: process.env.AWS_REGION,
   EMAIL_SOURCE: process.env.EMAIL_SOURCE,
-  ZALO_API: process.env.ZALO_API,
+  ZALO_API: process.env.ZALO_API
 };

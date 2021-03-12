@@ -21,15 +21,25 @@
       }
     ],
     "keyword-spacing": "error",
+    "no-useless-catch": "off",
     "space-infix-ops": "error",
     "no-const-assign": "error",
     "no-this-before-super": "error",
     "no-unreachable": "error",
     "constructor-super": "error",
     "valid-typeof": "error",
-    "no-useless-escape": "off",
     "no-var": "error",
-    "prefer-const": "error"
+    "prefer-const": "error",
+    "comma-dangle": "error",
+    "no-await-in-loop": "error",
+    "no-multi-spaces": "error",
+    "comma-spacing": "error",
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
+    ]
   },
   "env": {
     "node": true,
@@ -39,7 +49,7 @@
   "parserOptions": {
     "ecmaVersion": 8,
     "ecmaFeatures": {},
-    "sourceType": "module"
+    "sourceType": "module",
   },
   "extends": "eslint:recommended"
 }

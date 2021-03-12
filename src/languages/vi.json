@@ -1,0 +1,21 @@
+{
+	"NotificationBookingTitle": "Đặt hẹn",
+	"NotificationBookingBody": "Bạn đã checked out đặt hẹn",
+	"NotificationNewBookingTitle": "Đặt hẹn",
+	"NotificationNewBookingBody": "Bạn được chỉ định vào đặt hẹn mới",
+	"NotificationNewBookingSticker": "Gửi một nhãn dán",
+	"NotificationNewBookingAttachments": "Tài liệu đính kèm",
+	"NotificationNewConversationTitle": "Tin nhắn mới",
+	"NotificationNewConversationBody": "Bạn được chỉ định cho cuộc trò chuyện mới",
+	"NotificationNewComment": "Bình luận mới",
+	"NotificationCommentOnPostTitle": " gần đây đã nhận xét về bài viết của bạn",
+	"NotificationCommentOnPostTitleFirst": " gần đây đã nhận xét về  ",
+	"NotificationCommentOnPostTitleSecond": " bài đăng",
+	"NotificationReplyCommentTitle": " gần đây đã trả lời về bình luận của bạn",
+	"NotificationReplyCommentTitleFirst": " gần đây đã trả lời ",
+	"NotificationReplyCommentTitleSecond": " bình luận",
+	"NotificationReminderTitle": "Nhắc uống thuốc",
+	"NotificationReminderBodyFirst": "Điều này ",
+	"NotificationReminderBodySecond": " bạn cần dùng thuốc: ",
+	"NotificationReminderBodyThird": " thuốc. "
+}

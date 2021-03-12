@@ -1,8 +1,6 @@
 import { CronJob } from 'cron';
 import request from 'request';
-import DynamicValues from './dynamicValues';
-import msgData from '../utils/sourceTanGai';
-import { sendMessageWithAppState } from './sendMessage';
+import logger from 'utils/logger';
 
 const sendMessage = async () => {
   try {
@@ -11,7 +9,7 @@ const sendMessage = async () => {
     // await sendMessageWithAppState(msg);
     // DynamicValues.setNumberMessageFirebase(number + 1);
   } catch (e) {
-    console.log(e);
+    logger.error(e);
   }
 };
 
@@ -22,7 +20,7 @@ const wakeUp = () => {
     body
   ) {
     if (!error && response.statusCode == 200) {
-      console.log(body); // Print the google web page.
+      logger.error(body); // Print the google web page.
     }
   });
 };

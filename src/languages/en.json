@@ -1,0 +1,21 @@
+{
+	"NotificationBookingTitle": "Booking",
+	"NotificationBookingBody": "You are checked out booking",
+	"NotificationNewBookingTitle": "New Booking",
+	"NotificationNewBookingBody": "You are assigned to new booking",
+	"NotificationNewBookingSticker": "Send a sticker",
+	"NotificationNewBookingAttachments": "Attachments",
+	"NotificationNewConversationTitle": "New message",
+	"NotificationNewConversationBody": "You are assigned to new conversation",
+	"NotificationNewComment": "New comment",
+	"NotificationCommentOnPostTitle": " recently commented on your post",
+	"NotificationCommentOnPostTitleFirst": " recently commented on ",
+	"NotificationCommentOnPostTitleSecond": " post",
+	"NotificationReplyCommentTitle": " recently replied on your comment",
+	"NotificationReplyCommentTitleFirst": " recently replied on ",
+	"NotificationReplyCommentTitleSecond": " comment",
+	"NotificationReminderTitle": "Remind take medicines",
+	"NotificationReminderBodyFirst": "This ",
+	"NotificationReminderBodySecond": " you need take medicines: ",
+	"NotificationReminderBodyThird": " pills. "
+}

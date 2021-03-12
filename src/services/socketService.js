@@ -1,4 +1,6 @@
 import SocketIO from 'socket.io';
+import logger from 'utils/logger';
+
 class _SocketService {
   constructor() {
     this.io = null;
@@ -12,7 +14,7 @@ class _SocketService {
     }
     const rooms = {};
 
-    this.io.sockets.on('error', (e) => console.log(e));
+    this.io.sockets.on('error', (e) => logger.error(e));
 
     this.io.sockets.on('connection', (socket) => {
       socket.on('broadcaster', () => {

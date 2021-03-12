@@ -13,7 +13,7 @@ export function makeMemberCode() {
   let code = 'QM';
   const possible = '0123456789';
 
-  for (var i = 0; i < 10; i++)
+  for (let i = 0; i < 10; i++)
     code += possible.charAt(Math.floor(Math.random() * possible.length));
 
   return code;
